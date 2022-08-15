@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../heroes.interface';
-import { HEROES } from '../mock-heroes';
 import { HeroService } from '../hero.service';
 
 @Component({
@@ -26,6 +25,6 @@ export class HeroesComponent implements OnInit {
   getHeroes(): void {
     this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
     //This is equal to Observable.subscribe()
-    //in this case, the observable is getHeroes function in component HeroService
+    // in this case, the observable is getHeroes function in component HeroService
   }
 }
